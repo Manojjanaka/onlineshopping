@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="card mb-4 mr-1">
+      <div class=" card-img-wrapper">
+        <img class="card-img-top img-thumbnail" src="{{product.image}}" alt="{{product.name}} " />
+        <div class="card-body p-1">
+          <h5 class="card-title text-center-mb-1">
+            {{product.name}}, {{product.price}}
+          </h5>
+          <p class="card-text">{{product.description}}</p>
+
+        </div>
+
+        <div class="card-footer">
+          <div class="btn-group d-flex">
+            <button class="btn btn-success w-100" (click)="addToCart()">Add to Cart</button>
+            <button class="btn btn-primary w-100">Check Out</button>
+          </div>
+        </div>
+
+        <tabset class="member-tabset">
+          <tab heading="About {{product.name}}">
+            <h4 class="p-2">Description</h4>
+            <p class="p-2">{{product.description}}</p>
+          </tab>
+          <!--<tab heading="Photos">
+            <ngx-gallery style="display: inline-block; margin-bottom: 20px;" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+          </tab>-->
+        </tabset>
+      </div>
+    </div>
+
+    <tabset class="member-tab-set">
+      <tab heading="Specification" id="tab1" class="p-2">Specification</tab>
+      <tab heading="Images" class="p-2">Images</tab>
+      <tab heading="Review" class="p-2">Review</tab>
+    </tabset>
+  </div>
+</div>

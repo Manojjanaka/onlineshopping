@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col-12 mb-2">
+    <select class="selectBox" [(ngModel)]="selectedCategory" (change)="loadProducts()">
+      <option [value]="0">All Products</option>
+      <option *ngFor="let cat of categories | async" [value]="cat.categotyId">
+        {{cat.categoryName}}
+      </option>
+    </select>
+  </div>
+  <br/>
+  <main role="main">
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-4" *ngFor="let product of products | async">
+            <app-product [product]="product"></app-product>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
