@@ -8,6 +8,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { PaymentComponent } from './payment/payment.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { ReportComponent } from './report/report.component';
 const routes: Routes = [
   { path: 'product', component: ProductListComponent },
   { path: 'cart', component: CartComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'payment', component: PaymentComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'orders', component: OrderListComponent },
+  { path: 'report', component: ReportComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 

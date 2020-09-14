@@ -26,6 +26,8 @@ import { CartComponent } from './cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { FooterComponent } from './footer/footer.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FooterComponent } from './footer/footer.component';
     PaymentComponent,
     ProductListComponent,
     CartComponent,
-    FooterComponent
+    FooterComponent,
+    OrderListComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
